@@ -1,0 +1,977 @@
+const products = [
+    // =====================================================
+    // FURNITURE
+    // =====================================================
+
+    {
+        id: 1,
+        name: "Luna Lounge Sofa",
+        category: "Sofa",
+        room: "Living Room",
+        price: 32999,
+        oldPrice: 39999,
+        rating: 4.9,
+        reviews: 124,
+        badge: "BESTSELLER",
+        material: "Premium Fabric",
+        color: "Beige",
+        dimensions: "220 × 90 × 85 cm",
+        image:
+            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A beautifully crafted lounge sofa with soft cushioning and a timeless silhouette."
+    },
+
+    {
+        id: 2,
+        name: "Aster Accent Chair",
+        category: "Chair",
+        room: "Living Room",
+        price: 12499,
+        oldPrice: 15999,
+        rating: 4.8,
+        reviews: 86,
+        badge: "NEW",
+        material: "Velvet & Wood",
+        color: "Cream",
+        dimensions: "78 × 76 × 82 cm",
+        image:
+            "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "An elegant accent chair designed to add comfort and character to your living space."
+    },
+
+    {
+        id: 3,
+        name: "Oslo 3-Seater Sofa",
+        category: "Sofa",
+        room: "Living Room",
+        price: 38999,
+        oldPrice: 44999,
+        rating: 4.8,
+        reviews: 73,
+        badge: "POPULAR",
+        material: "Linen Fabric",
+        color: "Light Grey",
+        dimensions: "230 × 92 × 84 cm",
+        image:
+            "https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A spacious three-seater sofa with Scandinavian-inspired clean lines."
+    },
+
+    {
+        id: 4,
+        name: "Haven Modular Sofa",
+        category: "Sofa",
+        room: "Living Room",
+        price: 45999,
+        oldPrice: 52999,
+        rating: 4.9,
+        reviews: 58,
+        badge: "PREMIUM",
+        material: "Performance Fabric",
+        color: "Sand",
+        dimensions: "280 × 180 × 82 cm",
+        image:
+            "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A versatile modular sofa made for spacious and contemporary living rooms."
+    },
+
+    {
+        id: 5,
+        name: "Milo Recliner Chair",
+        category: "Chair",
+        room: "Living Room",
+        price: 17999,
+        oldPrice: 21999,
+        rating: 4.7,
+        reviews: 61,
+        badge: "COMFORT",
+        material: "Leatherette",
+        color: "Brown",
+        dimensions: "82 × 88 × 105 cm",
+        image:
+            "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A comfortable recliner designed for relaxing evenings and movie nights."
+    },
+
+    {
+        id: 6,
+        name: "Verona Coffee Table",
+        category: "Table",
+        room: "Living Room",
+        price: 14999,
+        oldPrice: 17999,
+        rating: 4.7,
+        reviews: 48,
+        badge: "POPULAR",
+        material: "Oak Wood",
+        color: "Natural Oak",
+        dimensions: "120 × 60 × 42 cm",
+        image:
+            "https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A refined wooden coffee table with a simple contemporary design."
+    },
+
+    {
+        id: 7,
+        name: "Linea Side Table",
+        category: "Table",
+        room: "Living Room",
+        price: 7999,
+        oldPrice: 9999,
+        rating: 4.6,
+        reviews: 39,
+        badge: "",
+        material: "Solid Wood",
+        color: "Walnut",
+        dimensions: "50 × 45 × 55 cm",
+        image:
+            "https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A compact side table perfect beside sofas, chairs and reading corners."
+    },
+
+    {
+        id: 8,
+        name: "Nordic Oak Table",
+        category: "Table",
+        room: "Living Room",
+        price: 18999,
+        oldPrice: 22999,
+        rating: 4.7,
+        reviews: 64,
+        badge: "POPULAR",
+        material: "Oak Wood",
+        color: "Natural",
+        dimensions: "140 × 70 × 45 cm",
+        image:
+            "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A Scandinavian-inspired oak table bringing warmth and simplicity to your home."
+    },
+
+    {
+        id: 9,
+        name: "Arlo Console Table",
+        category: "Table",
+        room: "Living Room",
+        price: 16999,
+        oldPrice: 19999,
+        rating: 4.6,
+        reviews: 42,
+        badge: "",
+        material: "Engineered Wood",
+        color: "Oak",
+        dimensions: "120 × 35 × 78 cm",
+        image:
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A slim console table ideal for entryways and living room walls."
+    },
+
+    {
+        id: 10,
+        name: "Mira Storage Cabinet",
+        category: "Cabinet",
+        room: "Living Room",
+        price: 21999,
+        oldPrice: 25999,
+        rating: 4.8,
+        reviews: 55,
+        badge: "NEW",
+        material: "Engineered Wood",
+        color: "Walnut",
+        dimensions: "150 × 42 × 78 cm",
+        image:
+            "https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A stylish storage cabinet combining hidden storage with modern design."
+    },
+
+    {
+        id: 11,
+        name: "Nova Bookshelf",
+        category: "Cabinet",
+        room: "Living Room",
+        price: 15999,
+        oldPrice: 18999,
+        rating: 4.7,
+        reviews: 46,
+        badge: "",
+        material: "Oak Finish",
+        color: "Light Oak",
+        dimensions: "90 × 35 × 180 cm",
+        image:
+            "https://images.unsplash.com/photo-1594620302200-9a762244a156?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "An open bookshelf for books, plants, artwork and everyday decor."
+    },
+
+    {
+        id: 12,
+        name: "Eden TV Unit",
+        category: "Cabinet",
+        room: "Living Room",
+        price: 23999,
+        oldPrice: 27999,
+        rating: 4.8,
+        reviews: 52,
+        badge: "BESTSELLER",
+        material: "Wood",
+        color: "Warm Walnut",
+        dimensions: "180 × 40 × 55 cm",
+        image:
+            "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A modern TV unit with generous storage and a clean premium finish."
+    },
+
+    // =====================================================
+    // LIGHTING
+    // =====================================================
+
+    {
+        id: 13,
+        name: "Aria Floor Lamp",
+        category: "Lighting",
+        room: "Lighting",
+        price: 6999,
+        oldPrice: 8999,
+        rating: 4.8,
+        reviews: 81,
+        badge: "POPULAR",
+        material: "Metal",
+        color: "Matte Black",
+        dimensions: "35 × 35 × 160 cm",
+        image:
+            "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A tall floor lamp that creates a warm and sophisticated atmosphere."
+    },
+
+    {
+        id: 14,
+        name: "Halo Table Lamp",
+        category: "Lighting",
+        room: "Lighting",
+        price: 3999,
+        oldPrice: 4999,
+        rating: 4.7,
+        reviews: 67,
+        badge: "NEW",
+        material: "Metal & Glass",
+        color: "Brass",
+        dimensions: "25 × 25 × 42 cm",
+        image:
+            "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A refined table lamp designed for bedside tables, consoles and desks."
+    },
+
+    {
+        id: 15,
+        name: "Luna Pendant Light",
+        category: "Lighting",
+        room: "Lighting",
+        price: 5999,
+        oldPrice: 7499,
+        rating: 4.8,
+        reviews: 44,
+        badge: "",
+        material: "Metal",
+        color: "Matte Black",
+        dimensions: "45 × 45 × 35 cm",
+        image:
+            "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A modern pendant light perfect above dining tables and kitchen counters."
+    },
+
+    {
+        id: 16,
+        name: "Nova Ceiling Light",
+        category: "Lighting",
+        room: "Lighting",
+        price: 4999,
+        oldPrice: 5999,
+        rating: 4.6,
+        reviews: 31,
+        badge: "",
+        material: "Metal & Acrylic",
+        color: "White",
+        dimensions: "60 × 60 × 12 cm",
+        image:
+            "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A clean contemporary ceiling light for modern interiors."
+    },
+
+    {
+        id: 17,
+        name: "Aura Wall Light",
+        category: "Lighting",
+        room: "Lighting",
+        price: 3499,
+        oldPrice: 4499,
+        rating: 4.7,
+        reviews: 36,
+        badge: "",
+        material: "Metal",
+        color: "Brass",
+        dimensions: "18 × 15 × 30 cm",
+        image:
+            "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A warm wall light that adds an elegant glow to hallways and bedrooms."
+    },
+
+    {
+        id: 18,
+        name: "Edison Floor Lamp",
+        category: "Lighting",
+        room: "Lighting",
+        price: 7499,
+        oldPrice: 8999,
+        rating: 4.7,
+        reviews: 28,
+        badge: "",
+        material: "Iron",
+        color: "Black",
+        dimensions: "40 × 40 × 155 cm",
+        image:
+            "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "An industrial-inspired floor lamp with a warm decorative glow."
+    },
+
+    {
+        id: 19,
+        name: "Glow Bedside Lamp",
+        category: "Lighting",
+        room: "Lighting",
+        price: 2999,
+        oldPrice: 3999,
+        rating: 4.8,
+        reviews: 72,
+        badge: "BESTSELLER",
+        material: "Ceramic & Fabric",
+        color: "Cream",
+        dimensions: "18 × 18 × 30 cm",
+        image:
+            "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A soft bedside lamp designed to create a calm evening atmosphere."
+    },
+
+    {
+        id: 20,
+        name: "Orbit Chandelier",
+        category: "Lighting",
+        room: "Lighting",
+        price: 14999,
+        oldPrice: 17999,
+        rating: 4.9,
+        reviews: 23,
+        badge: "PREMIUM",
+        material: "Metal & Glass",
+        color: "Gold",
+        dimensions: "80 × 80 × 55 cm",
+        image:
+            "https://images.unsplash.com/photo-1543198126-a8ad8e47fb22?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A statement chandelier designed for sophisticated dining and living spaces."
+    },
+
+    // =====================================================
+    // WALL DECOR
+    // =====================================================
+
+    {
+        id: 21,
+        name: "Aura Wall Mirror",
+        category: "Mirror",
+        room: "Wall Decor",
+        price: 6999,
+        oldPrice: 8999,
+        rating: 4.9,
+        reviews: 93,
+        badge: "BESTSELLER",
+        material: "Glass & Metal",
+        color: "Gold",
+        dimensions: "80 × 80 cm",
+        image:
+            "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A sophisticated round mirror that creates a refined focal point."
+    },
+
+    {
+        id: 22,
+        name: "Minimal Art Frame",
+        category: "Wall Decor",
+        room: "Wall Decor",
+        price: 2499,
+        oldPrice: 2999,
+        rating: 4.6,
+        reviews: 35,
+        badge: "",
+        material: "Wood & Paper",
+        color: "Black",
+        dimensions: "40 × 60 cm",
+        image:
+            "https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "Minimal artwork for adding personality to clean modern walls."
+    },
+
+    {
+        id: 23,
+        name: "Abstract Canvas Set",
+        category: "Wall Decor",
+        room: "Wall Decor",
+        price: 4499,
+        oldPrice: 5999,
+        rating: 4.8,
+        reviews: 51,
+        badge: "NEW",
+        material: "Canvas",
+        color: "Neutral",
+        dimensions: "30 × 40 cm each",
+        image:
+            "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A curated set of abstract canvas artworks for contemporary homes."
+    },
+
+    {
+        id: 24,
+        name: "Vintage Wall Clock",
+        category: "Wall Decor",
+        room: "Wall Decor",
+        price: 2999,
+        oldPrice: 3999,
+        rating: 4.5,
+        reviews: 29,
+        badge: "",
+        material: "Metal",
+        color: "Black",
+        dimensions: "50 × 50 cm",
+        image:
+            "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A classic wall clock combining practical function with vintage charm."
+    },
+
+    {
+        id: 25,
+        name: "Arch Decorative Mirror",
+        category: "Mirror",
+        room: "Wall Decor",
+        price: 7999,
+        oldPrice: 9999,
+        rating: 4.8,
+        reviews: 47,
+        badge: "POPULAR",
+        material: "Glass & Metal",
+        color: "Black",
+        dimensions: "60 × 100 cm",
+        image:
+            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "An elegant arched mirror designed to visually open up your room."
+    },
+
+    {
+        id: 26,
+        name: "Botanical Art Print",
+        category: "Wall Decor",
+        room: "Wall Decor",
+        price: 1999,
+        oldPrice: 2499,
+        rating: 4.7,
+        reviews: 32,
+        badge: "",
+        material: "Art Paper",
+        color: "Green",
+        dimensions: "40 × 50 cm",
+        image:
+            "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "Botanical-inspired artwork bringing a natural feeling indoors."
+    },
+
+    {
+        id: 27,
+        name: "Geometric Wall Panel",
+        category: "Wall Decor",
+        room: "Wall Decor",
+        price: 5999,
+        oldPrice: 6999,
+        rating: 4.6,
+        reviews: 21,
+        badge: "",
+        material: "Wood",
+        color: "Walnut",
+        dimensions: "90 × 60 cm",
+        image:
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A dimensional geometric wall panel for contemporary interiors."
+    },
+
+    {
+        id: 28,
+        name: "Luxe Gold Mirror",
+        category: "Mirror",
+        room: "Wall Decor",
+        price: 8999,
+        oldPrice: 10999,
+        rating: 4.9,
+        reviews: 38,
+        badge: "PREMIUM",
+        material: "Glass & Metal",
+        color: "Gold",
+        dimensions: "75 × 110 cm",
+        image:
+            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A luxurious statement mirror with a refined metallic frame."
+    },
+
+    // =====================================================
+    // BEDROOM
+    // =====================================================
+
+    {
+        id: 29,
+        name: "Cloudline Bed",
+        category: "Bed",
+        room: "Bedroom",
+        price: 42999,
+        oldPrice: 49999,
+        rating: 4.9,
+        reviews: 97,
+        badge: "PREMIUM",
+        material: "Fabric & Wood",
+        color: "Beige",
+        dimensions: "180 × 210 × 110 cm",
+        image:
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A plush upholstered bed designed for a calm and luxurious bedroom."
+    },
+
+    {
+        id: 30,
+        name: "Haven King Bed",
+        category: "Bed",
+        room: "Bedroom",
+        price: 45999,
+        oldPrice: 52999,
+        rating: 4.8,
+        reviews: 69,
+        badge: "BESTSELLER",
+        material: "Solid Wood",
+        color: "Natural Oak",
+        dimensions: "200 × 220 × 105 cm",
+        image:
+            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A spacious king bed with a warm wooden finish and modern silhouette."
+    },
+
+    {
+        id: 31,
+        name: "SoftNest Bedsheet Set",
+        category: "Bedsheet",
+        room: "Bedroom",
+        price: 2499,
+        oldPrice: 3499,
+        rating: 4.8,
+        reviews: 118,
+        badge: "BESTSELLER",
+        material: "Cotton",
+        color: "Ivory",
+        dimensions: "King Size",
+        image:
+            "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A soft cotton bedsheet set designed for comfortable everyday use."
+    },
+
+    {
+        id: 32,
+        name: "Cloud Pillow Set",
+        category: "Pillow",
+        room: "Bedroom",
+        price: 1299,
+        oldPrice: 1799,
+        rating: 4.7,
+        reviews: 91,
+        badge: "",
+        material: "Microfiber",
+        color: "White",
+        dimensions: "45 × 70 cm",
+        image:
+            "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "Soft supportive pillows made for restful nights."
+    },
+
+    {
+        id: 33,
+        name: "Velvet Cushion Set",
+        category: "Cushion",
+        room: "Bedroom",
+        price: 1599,
+        oldPrice: 2199,
+        rating: 4.6,
+        reviews: 44,
+        badge: "NEW",
+        material: "Velvet",
+        color: "Olive",
+        dimensions: "45 × 45 cm",
+        image:
+            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "Velvet cushions that add softness and colour to your bedroom."
+    },
+
+    {
+        id: 34,
+        name: "Cozy Throw Blanket",
+        category: "Blanket",
+        room: "Bedroom",
+        price: 1899,
+        oldPrice: 2499,
+        rating: 4.8,
+        reviews: 57,
+        badge: "",
+        material: "Cotton Blend",
+        color: "Cream",
+        dimensions: "130 × 180 cm",
+        image:
+            "https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A soft textured throw blanket for cosy evenings and relaxed spaces."
+    },
+
+    {
+        id: 35,
+        name: "Linen Curtain Set",
+        category: "Curtains",
+        room: "Bedroom",
+        price: 3299,
+        oldPrice: 4299,
+        rating: 4.7,
+        reviews: 41,
+        badge: "",
+        material: "Linen Blend",
+        color: "Natural",
+        dimensions: "140 × 240 cm",
+        image:
+            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "Lightweight linen curtains that create a soft and elegant atmosphere."
+    },
+
+    {
+        id: 36,
+        name: "Nova Bedside Table",
+        category: "Table",
+        room: "Bedroom",
+        price: 6999,
+        oldPrice: 8499,
+        rating: 4.7,
+        reviews: 36,
+        badge: "",
+        material: "Oak Wood",
+        color: "Natural Oak",
+        dimensions: "45 × 40 × 55 cm",
+        image:
+            "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A compact bedside table with storage and a clean natural finish."
+    },
+
+    // =====================================================
+    // KITCHEN & DINING
+    // =====================================================
+
+    {
+        id: 37,
+        name: "Oak Dining Table",
+        category: "Dining Table",
+        room: "Dining",
+        price: 24999,
+        oldPrice: 29999,
+        rating: 4.9,
+        reviews: 64,
+        badge: "BESTSELLER",
+        material: "Solid Oak",
+        color: "Natural Oak",
+        dimensions: "180 × 90 × 76 cm",
+        image:
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A solid oak dining table made for family meals and memorable gatherings."
+    },
+
+    {
+        id: 38,
+        name: "Nordic Dining Chair",
+        category: "Dining Chair",
+        room: "Dining",
+        price: 4999,
+        oldPrice: 5999,
+        rating: 4.7,
+        reviews: 52,
+        badge: "",
+        material: "Wood & Fabric",
+        color: "Beige",
+        dimensions: "48 × 52 × 82 cm",
+        image:
+            "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A comfortable Scandinavian-inspired dining chair with soft upholstery."
+    },
+
+    {
+        id: 39,
+        name: "Terra Dining Set",
+        category: "Dining Set",
+        room: "Dining",
+        price: 34999,
+        oldPrice: 41999,
+        rating: 4.8,
+        reviews: 31,
+        badge: "POPULAR",
+        material: "Wood",
+        color: "Walnut",
+        dimensions: "Table + 4 Chairs",
+        image:
+            "https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A complete dining set combining warm wood tones with contemporary styling."
+    },
+
+    {
+        id: 40,
+        name: "Ceramic Dinner Set",
+        category: "Crockery",
+        room: "Dining",
+        price: 2999,
+        oldPrice: 3999,
+        rating: 4.8,
+        reviews: 73,
+        badge: "NEW",
+        material: "Ceramic",
+        color: "Off White",
+        dimensions: "18 Pieces",
+        image:
+            "https://images.unsplash.com/photo-1603199506016-b9a594b593c0?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A refined ceramic dinnerware set for everyday meals and special occasions."
+    },
+
+    {
+        id: 41,
+        name: "Bamboo Storage Rack",
+        category: "Kitchen Storage",
+        room: "Kitchen",
+        price: 3499,
+        oldPrice: 4499,
+        rating: 4.6,
+        reviews: 39,
+        badge: "",
+        material: "Bamboo",
+        color: "Natural",
+        dimensions: "60 × 30 × 100 cm",
+        image:
+            "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A practical bamboo rack for organising kitchen essentials beautifully."
+    },
+
+    {
+        id: 42,
+        name: "Glass Serving Set",
+        category: "Dining Accessories",
+        room: "Dining",
+        price: 2299,
+        oldPrice: 2999,
+        rating: 4.7,
+        reviews: 28,
+        badge: "",
+        material: "Glass",
+        color: "Clear",
+        dimensions: "5 Pieces",
+        image:
+            "https://images.unsplash.com/photo-1603199506016-b9a594b593c0?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "Elegant glass serving pieces for dining and entertaining guests."
+    },
+
+    {
+        id: 43,
+        name: "Marble Serving Tray",
+        category: "Dining Accessories",
+        room: "Dining",
+        price: 2799,
+        oldPrice: 3499,
+        rating: 4.8,
+        reviews: 34,
+        badge: "PREMIUM",
+        material: "Marble",
+        color: "White",
+        dimensions: "40 × 25 cm",
+        image:
+            "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A premium marble serving tray for elegant dining presentation."
+    },
+
+    // =====================================================
+    // HOME ACCESSORIES
+    // =====================================================
+
+    {
+        id: 44,
+        name: "Terra Ceramic Vase",
+        category: "Vase",
+        room: "Decor",
+        price: 1799,
+        oldPrice: 2299,
+        rating: 4.8,
+        reviews: 48,
+        badge: "POPULAR",
+        material: "Ceramic",
+        color: "Terracotta",
+        dimensions: "20 × 20 × 30 cm",
+        image:
+            "https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A handcrafted ceramic vase that adds warmth and character to shelves."
+    },
+
+    {
+        id: 45,
+        name: "GreenLeaf Artificial Plant",
+        category: "Plants",
+        room: "Decor",
+        price: 1299,
+        oldPrice: 1699,
+        rating: 4.6,
+        reviews: 66,
+        badge: "",
+        material: "Synthetic Plant",
+        color: "Green",
+        dimensions: "25 × 25 × 60 cm",
+        image:
+            "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A realistic artificial plant that brings greenery into your home without maintenance."
+    },
+
+    {
+        id: 46,
+        name: "Cozy Area Rug",
+        category: "Rug",
+        room: "Decor",
+        price: 4999,
+        oldPrice: 6499,
+        rating: 4.8,
+        reviews: 59,
+        badge: "BESTSELLER",
+        material: "Polyester",
+        color: "Cream",
+        dimensions: "160 × 230 cm",
+        image:
+            "https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A soft area rug designed to make living spaces warmer and more inviting."
+    },
+
+    {
+        id: 47,
+        name: "Stone Decorative Bowl",
+        category: "Decor",
+        room: "Decor",
+        price: 1899,
+        oldPrice: 2499,
+        rating: 4.7,
+        reviews: 25,
+        badge: "",
+        material: "Stone",
+        color: "Beige",
+        dimensions: "30 × 30 × 10 cm",
+        image:
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A sculptural decorative bowl for coffee tables and console styling."
+    },
+
+    {
+        id: 48,
+        name: "Minimal Showpiece",
+        category: "Showpiece",
+        room: "Decor",
+        price: 1599,
+        oldPrice: 1999,
+        rating: 4.6,
+        reviews: 19,
+        badge: "",
+        material: "Resin",
+        color: "Black",
+        dimensions: "15 × 12 × 28 cm",
+        image:
+            "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A minimal sculptural showpiece for modern shelves and consoles."
+    },
+
+    {
+        id: 49,
+        name: "Woven Basket Set",
+        category: "Storage",
+        room: "Decor",
+        price: 2299,
+        oldPrice: 2999,
+        rating: 4.8,
+        reviews: 42,
+        badge: "NEW",
+        material: "Natural Fiber",
+        color: "Natural",
+        dimensions: "Set of 3",
+        image:
+            "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A set of woven baskets for stylish and practical home organisation."
+    },
+
+    {
+        id: 50,
+        name: "Aroma Candle Holder",
+        category: "Decor",
+        room: "Decor",
+        price: 999,
+        oldPrice: 1399,
+        rating: 4.7,
+        reviews: 37,
+        badge: "",
+        material: "Ceramic",
+        color: "Ivory",
+        dimensions: "12 × 12 × 15 cm",
+        image:
+            "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1200&q=90",
+        description:
+            "A decorative candle holder designed to create a warm and relaxing ambience."
+    },
+];
+
+export default products;
