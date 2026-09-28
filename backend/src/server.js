@@ -25,8 +25,10 @@ const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
     "http://localhost:5173",
-    process.env.FRONTEND_URL,
-].filter(Boolean);
+    "https://homeaura.vercel.app",
+    "https://homeaura-git-main-sakiralik0440-collabs-projects.vercel.app",
+    "https://homeaura-677k5swq3-sakiralik0440-collabs-projects.vercel.app",
+];
 
 app.use(
     cors({
