@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const API_URL = "http://localhost:5000/api/orders";
+const API_URL = "https://homeaura-1.onrender.com";
 
 const STATUS_OPTIONS = [
     "placed",
