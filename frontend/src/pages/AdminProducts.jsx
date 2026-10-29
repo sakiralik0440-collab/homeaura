@@ -14,13 +14,12 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const API_URL =
-    import.meta.env.VITE_API_URL ||
-    "https://homeaura-1.onrender.com/api/admin/products";
-
 const BACKEND_URL =
     import.meta.env.VITE_BACKEND_URL ||
-    "https://homeaura-1.onrender.com/api/admin/products";
+    "https://homeaura-1.onrender.com";
+
+const API_URL =
+    `${BACKEND_URL}/api/admin/products`;
 
 const UPLOAD_URL =
     `${BACKEND_URL}/api/uploads/product-image`;
