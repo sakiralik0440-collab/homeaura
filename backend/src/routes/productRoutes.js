@@ -1,20 +1,29 @@
 
+
 import express from "express";
 
 import {
     getProducts,
     getProductById,
+    createProduct,
+    updateProduct,
+    deleteProduct,
 } from "../controllers/productController.js";
+
+import adminAuthMiddleware from "../middleware/adminAuthMiddleware.js";
 
 const router = express.Router();
 
-// Public product APIs
-// No admin authentication required
+// GET all admin products
+router.get("/", adminAuthMiddleware, getProducts);
 
-// GET /api/products
-router.get("/", getProducts);
+// CREATE product
+router.post("/", adminAuthMiddleware, createProduct);
 
-// GET /api/products/:id
-router.get("/:id", getProductById);
+// UPDATE product
+router.put("/:id", adminAuthMiddleware, updateProduct);
+
+// DELETE product
+router.delete("/:id", adminAuthMiddleware, deleteProduct);
 
 export default router;
