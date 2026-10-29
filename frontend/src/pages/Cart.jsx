@@ -81,7 +81,7 @@ function Cart() {
             });
 
             const response = await axios.post(
-                "http://localhost:5000/api/coupons/validate",
+                "https://homeaura-1.onrender.com/api/coupons/validate",
                 {
                     code,
                     orderAmount: Number(cartSubtotal),
