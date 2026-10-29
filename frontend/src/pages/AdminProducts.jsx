@@ -20,7 +20,7 @@ const API_URL =
 
 const BACKEND_URL =
     import.meta.env.VITE_BACKEND_URL ||
-    "http://localhost:5000";
+    "https://homeaura-1.onrender.com/api/admin/products";
 
 const UPLOAD_URL =
     `${BACKEND_URL}/api/uploads/product-image`;
