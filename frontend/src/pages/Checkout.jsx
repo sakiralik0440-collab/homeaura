@@ -18,7 +18,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useCart } from "../context/CartContext";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://homeaura-1.onrender.com";
 
 // =====================================================
 // LOAD RAZORPAY CHECKOUT SCRIPT
