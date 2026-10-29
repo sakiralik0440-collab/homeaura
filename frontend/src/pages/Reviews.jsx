@@ -6,7 +6,7 @@ import { Star, ArrowLeft, MessageSquare } from "lucide-react";
 
 const API_URL =
     import.meta.env.VITE_API_URL ||
-    "http://localhost:5000";
+    "https://homeaura-1.onrender.com";
 
 const products = [
     {
