@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const API_URL = "http://localhost:5000/api/admin/categories";
+const API_URL = "https://homeaura-1.onrender.com/api/admin/categories";
 
 function AdminCategories() {
     const [categories, setCategories] = useState([]);
