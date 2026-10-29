@@ -31,7 +31,7 @@ function Orders() {
             setError("");
 
             const response = await axios.get(
-                "http://localhost:5000/api/orders"
+                "https://homeaura-1.onrender.com/api/orders"
             );
 
             setOrders(response.data.orders || []);
